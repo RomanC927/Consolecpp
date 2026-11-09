@@ -33,7 +33,7 @@ void Todolist::file(const string& a) {
 	ifstream file(a);
 
 	if (!file.is_open()) {
-		cout << "Ôàéë íå íàéäåí. Ñîçäàí íîâûé ñïèñîê." << endl;
+		cout << "Ð¤Ð°Ð¹Ð» Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½. Ð¡Ð¾Ð·Ð´Ð°Ð½ Ð½Ð¾Ð²Ñ‹Ð¹ ÑÐ¿Ð¸ÑÐ¾Ðº." << endl;
 		return;
 	}
 	string lin;
@@ -44,7 +44,7 @@ void Todolist::file(const string& a) {
 		}
 	}
 	file.close();
-	cout << "Ôàéë çàãðóæåí!" << endl;
+	cout << "Ð¤Ð°Ð¹Ð» Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½!" << endl;
 }
 int Todolist::size() const {
 	return tasks.size();
