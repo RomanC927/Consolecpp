@@ -8,28 +8,28 @@ int main() {
     listic.file("tasks.txt");
     while (true) {
         cout << endl << "TODO LIST" << endl;
-        cout << "1. Äîáàâèòü çàäà÷ó" << endl;
-        cout << "2. Ïîêàçàòü âñå çàäà÷è" << endl;
-        cout << "3. Âûïîëíèòü çàäà÷ó" << endl;
-        cout << "4. Óäàëèòü çàäà÷ó" << endl;
-        cout << "5. Ñîõðàíèòü" << endl;
-        cout << "6. Çàãðóçèòü" << endl;
-        cout << "0. Âûõîä" << endl;
-        cout << "Âûáîð: ";
+        cout << "1. Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð·Ð°Ð´Ð°Ñ‡Ñƒ" << endl;
+     cout << "2. ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ Ð²ÑÐµ Ð·Ð°Ð´Ð°Ñ‡Ð¸" << endl;
+     cout << "3. Ð’Ñ‹Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ð·Ð°Ð´Ð°Ñ‡Ñƒ" << endl;
+     cout << "4. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ Ð·Ð°Ð´Ð°Ñ‡Ñƒ" << endl;
+     cout << "5. Ð¡Ð¾Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ÑŒ" << endl;
+     cout << "6. Ð—Ð°Ð³Ñ€ÑƒÐ·Ð¸Ñ‚ÑŒ" << endl;
+     cout << "0. Ð’Ñ‹Ñ…Ð¾Ð´" << endl;
+     cout << "Ð’Ñ‹Ð±Ð¾Ñ€: ";
         cin >> c;
         if (cin.fail()) {
             cin.clear();
             cin.ignore(1000, '\n'); 
-            cout << "Ââåäèòå ÷èñëî!" << endl;
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾!" << endl;
             continue;
         }
         switch (c) {
         case 1: {
             string t, d;
-            cout << "Íàçâàíèå: ";
+            cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: ";
             cin.ignore(1000, '\n'); 
             getline(cin, t);
-            cout << "Îïèñàíèå: ";
+            cout << "ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ: ";
             getline(cin, d);
             listic.addtask(t, d);
             break;
@@ -39,14 +39,14 @@ int main() {
             break;
         case 3: {
             int index;
-            cout << "Íîìåð çàäà÷è: ";
+            cout << "ÐÐ¾Ð¼ÐµÑ€ Ð·Ð°Ð´Ð°Ñ‡Ð¸: ";
             cin >> index;
             listic.complete(index - 1);
             break;
         }
         case 4: {
             int index;
-            cout << "Íîìåð çàäà÷è: ";
+            cout << "ÐÐ¾Ð¼ÐµÑ€ Ð·Ð°Ð´Ð°Ñ‡Ð¸: ";
             cin >> index;
             listic.remove(index - 1);
             break;
@@ -59,10 +59,10 @@ int main() {
             break;
         case 0:
             listic.save("tasks.txt");
-            cout << "Äî ñâèäàíèÿ!" << endl;
+            cout << "Ð”Ð¾ ÑÐ²Ð¸Ð´Ð°Ð½Ð¸Ñ!" << endl;
             return 0;
         default:
-            cout << "Íåâåðíûé âûáîð" << endl;
+            cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€" << endl;
         }
     }
 }
